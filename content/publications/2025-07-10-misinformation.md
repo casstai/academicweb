@@ -1,16 +1,18 @@
 ---
 author: Tai, Yuehong Cassandra, Yu-ru Lin, and Bruce A. Desmarais
 comments: false
-date: '2025-04-05'
+date: '2026-06-01'
 slug: public-official-misinformation
-title: 'Public Officials’ Online Sharing of Misinformation: Institutional and Ideological Checks'
+title: 'Elected officials’ Online Sharing of Misinformation: Institutional and Ideological Checks'
 kind: article
+featured: 1
 section: publications
 tags:
 - misinformation
 - public officials
 - social media
-citation: <em>Conditionally Accepted at Political Communication</em>
+citation: <em>Political Communication</em>
+doi: 10.1080/10584609.2026.2613661
 ---
 
 

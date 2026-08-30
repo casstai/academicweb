@@ -5,11 +5,12 @@ date: '2025-01-02'
 slug: trust-taxmorale
 title: 'The Upsides and Downsides of Generalized Trust: The Mediating Effect of Democratic Institutions'
 kind: article
+section: publications
 tags:
 - social trust
 - democracy
 - tax morale
-citation: <em>Conditionally Accepted at International Journal of Public Opinion Research</em>
+citation: <em>International Journal of Public Opinion Research</em>
 ---
 
 

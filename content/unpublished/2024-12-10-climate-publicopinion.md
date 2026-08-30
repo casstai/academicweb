@@ -1,10 +1,14 @@
 ---
-author: Tai, Yuehong Cassandra, Xun Cao and Fred Solt
 comments: false
 date: '2024-12-10'
 slug: climate-public opinion
-title: 'How Does Public Opinion Affect Climate Change Policies? Constructing Measures of Climate Change Public Concern and Testing Their Effects on Climate Policy Outputs'
+title: 'How Does Public Opinion Affect Climate Change Policies?'
 kind: working paper
+_build:
+  render: never
+  list: local
+citation: (with Xun Cao and Fred Solt) [Lead Author]
+ordinal: 5
 tags:
 - climate
 - public opinion

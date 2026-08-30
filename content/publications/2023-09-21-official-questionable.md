@@ -1,5 +1,5 @@
 ---
-author: Tai, Yuehong Cassandra, Roan Buma and Bruce A. Desmarais. 2023. 
+author: Tai, Yuehong Cassandra, Roan Buma and Bruce A. Desmarais
 comments: false
 date: '2023-09-21'
 slug: official-questionable

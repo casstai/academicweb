@@ -8,63 +8,38 @@
       <a href="https://scholar.google.com/citations?user=LLWK3Z4AAAAJ&hl=en" class="badge badge-large" target="_blank" rel="noopener noreferrer">Google Scholar&nbsp;<i class="fa-brands fa-google-scholar"></i></a></h3>
 
       <div style='padding-bottom: 2rem;'></div>
-      
-      </div>
-      <h2>Revise & Resubmit</h2>
-      {{ range (where .Pages "Params.kind" "==" "rr").GroupByDate "2006" "desc" }}
-      <div class="row">
-        <div class="column small-2 medium-2">
-          <h3>{{ .Key }}</h3>
-        </div>
-        <div class="column small-10 medium-10">
-          <span style="font-size: 90%">
-           <ul class="compact fa-ul">
-             {{ range .Pages.ByDate.Reverse }}
-             <li style="margin-bottom: 9px;">{{ partial "pub-summary" . }}</li>
-             {{ end }}
-           </ul></span>
-         </div>
-       </div>
-       {{ end }}
-             
-      <div style='padding-bottom: 2rem;'></div>
-      
+
+      {{/* Manually ordered via the `ordinal` param -- deliberately NOT Hugo's
+           built-in `weight`, which would also reorder the home page. Accepted
+           papers are deliberately excluded: they live on the Publications page
+           with an "Accepted at ..." citation and are not listed again here. */}}
+      {{ $pipeline := where .Site.RegularPages "Params.kind" "in" (slice "rr" "under review") }}
+      {{ if $pipeline }}
       <h2>Under Review</h2>
-      {{ range (where .Pages "Params.kind" "==" "under review").GroupByDate "2006" "desc" }}
-      <div class="row">
-        <div class="column small-2 medium-2">
-          <h3>{{ .Key }}</h3>
-        </div>
-        <div class="column small-10 medium-10">
-          <span style="font-size: 90%">
-           <ul class="compact fa-ul">
-             {{ range .Pages.ByDate.Reverse }}
-             <li style="margin-bottom: 9px;">{{ partial "pub-summary" . }}</li>
-             {{ end }}
-           </ul></span>
-         </div>
-       </div>
-       {{ end }}
-       
-       <div style='padding-bottom: 2rem;'></div>
-      
-      <h2>Working papers</h2>
-      {{ range (where .Pages "Params.kind" "==" "working paper").GroupByDate "2006" "desc" }}
-      <div class="row">
-        <div class="column small-2 medium-2">
-          <h3>{{ .Key }}</h3>
-        </div>
-        <div class="column small-10 medium-10">
-          <span style="font-size: 90%">
-           <ul class="compact fa-ul">
-             {{ range .Pages.ByDate.Reverse }}
-             <li style="margin-bottom: 9px;">{{ partial "pub-summary" . }}</li>
-             {{ end }}
-           </ul></span>
-         </div>
-       </div>
-       {{ end }}
-       
+      <span style="font-size: 90%">
+        <ul class="compact fa-ul">
+          {{ range sort $pipeline "Params.ordinal" }}
+          <li style="margin-bottom: 9px;">{{ partial "pub-summary" . }}</li>
+          {{ end }}
+        </ul>
+      </span>
+
+      <div style='padding-bottom: 2rem;'></div>
+      {{ end }}
+
+      {{/* Also `ordinal`-ordered, to match the CV's Select Works in Progress. */}}
+      {{ $wip := where .Pages "Params.kind" "==" "working paper" }}
+      {{ if $wip }}
+      <h2>Select Works in Progress</h2>
+      <span style="font-size: 90%">
+        <ul class="compact fa-ul">
+          {{ range sort $wip "Params.ordinal" }}
+          <li style="margin-bottom: 9px;">{{ partial "pub-summary" . }}</li>
+          {{ end }}
+        </ul>
+      </span>
+      {{ end }}
+
      </div>
    </div>
  </div>

@@ -9,7 +9,7 @@ section: publications
 tags:
 - public opinion
 - gay rights
-citation: "Forthcoming. Social Science Quarterly"
+citation: <em>Social Science Quarterly</em>
 file: 2024-gayrights.pdf
 doi: 10.1111/ssqu.13478
 code: https://github.com/fsolt/dcpo_gayrights
