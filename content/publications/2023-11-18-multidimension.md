@@ -1,17 +1,17 @@
 ---
-author:   Hu, Yue, Yuehong Cassandra Tai, Hyein Ko, Byung-Deuk Woo, and Frederick Solt
+author: Hu, Yue, Yuehong Cassandra Tai, Hyein Ko, Byung-Deuk Woo, and Frederick Solt
 comments: false
 date: '2025-01-01'
 slug: incomplete-recipe
-section: publications
-title: 'An Incomplete Recipe: One-Dimensional Latent Variables Do Not Capture the Full Flavor of Democratic Support'
+title: 'An incomplete recipe: One-dimensional latent variables do not capture the full flavor of democratic support'
 kind: article
+section: publications
 tags:
 - democratic support
 - democracy
 - measurement
-file: hu2023multidimension.pdf
-doi: 10.31235/osf.io/rym8g
+file:  hu2023multidimension.pdf
+doi: 10.1177/20531680251341857
 code: https://github.com/fsolt/dcpo_demsupport_data
 ---
 

@@ -5,6 +5,7 @@ date: '2025-01-31'
 slug: llm-misinformation
 title: 'GenAI vs. Human Fact-Checkers: Accurate Ratings, Flawed Rationales'
 kind: article
+featured: 3
 section: publications
 tags:
 - misinformation

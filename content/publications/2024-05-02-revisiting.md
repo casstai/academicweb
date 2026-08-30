@@ -9,7 +9,7 @@ section: publications
 tags:
 - measurement
 - democratic support
-citation: <em>Political Science Research and Methods</em>. (*co-first author*)
+citation: <em>Political Science Research and Methods</em>. (<em>co-first author</em>)
 file: 2024-revisiting.pdf
 doi: 10.1017/psrm.2024.16
 code: https://github.com/fsolt/dem_mood
