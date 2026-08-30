@@ -36,28 +36,37 @@
     <!-- Right section: Publications -->
     <div class="column small-12 medium-6" style="flex: 1; max-width: 50%;">
       <section class="publications-section">
-        <h1>Recent Publications</h1>
+        {{/* Hand-picked: set `featured: 1`, `featured: 2`, ... in a publication's
+             front matter and it appears here in that order. Only published
+             articles are eligible; accepted-but-not-yet-out papers belong in the
+             section below. If nothing is marked featured -- e.g. part-way through
+             a content migration -- this falls back to the most recent
+             `pubs_count` articles by date, so the section is never empty. */}}
+        <h1>Selected Recent Publications</h1>
         <ul>
-         {{ range first $.Site.Params.pubs_count (where .Site.Pages "Section" "publications") }}
-    {{ if ne .File.Path "publications/_index.md" }} <!-- Exclude _index.md explicitly -->
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        {{ with .Params.abstract }}<p>{{ . }}</p>{{ end }}
-      </li>
-    {{ end }}
-  {{ end }}
-        </ul>
-        <a href="/publications/" class="button">All Publications</a>
-
-        <h1>Selected Under Review and R&R Papers</h1>
-        <ul>
-          {{ range first $.Site.Params.unpublished_count (where .Site.Pages "Section" "unpublished") }}
-           {{ if ne .File.Path "unpublished/_index.md" }} <!-- Exclude _index.md explicitly -->
+          {{ $published := where (where .Site.RegularPages "Section" "publications") "Params.kind" "==" "article" }}
+          {{ $featured := where $published "Params.featured" "!=" nil }}
+          {{ $selected := cond (gt (len $featured) 0) (sort $featured "Params.featured") (first $.Site.Params.pubs_count $published.ByDate.Reverse) }}
+          {{ range $selected }}
           <li>
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             {{ with .Params.abstract }}<p>{{ . }}</p>{{ end }}
           </li>
           {{ end }}
+        </ul>
+        <a href="/publications/" class="button">All Publications</a>
+
+        {{/* Manually ordered by the `ordinal` param. Accepted papers are
+             excluded here -- they appear on the Publications page instead.
+             Works in progress are deliberately excluded too. */}}
+        <h1>Under Review</h1>
+        <ul>
+          {{ $pipeline := where .Site.RegularPages "Params.kind" "in" (slice "rr" "under review") }}
+          {{ range first $.Site.Params.unpublished_count (sort $pipeline "Params.ordinal") }}
+          <li>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            {{ with .Params.abstract }}<p>{{ . }}</p>{{ end }}
+          </li>
           {{ end }}
         </ul>
         <a href="/unpublished/" class="button">All Working Papers</a>

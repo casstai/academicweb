@@ -9,4 +9,8 @@
 {{ if .Params.figshare }} <a href="https://monash.figshare.com/file/download/{{.Params.figshare}}" target="_blank" class="badge badge-small badge-red"><i class="fa fa-file-pdf-o"></i>&nbsp;pdf</a>{{ end }}
 {{ if .Params.file }}<a href="/papers/{{.Params.file}}" class="badge badge-small badge-red"><i class="fa fa-file-pdf-o"></i>&nbsp;pdf</a>{{ end }}
 {{ if .Params.code }}<a href={{.Params.code}} target="_blank" class="badge badge-small badge-green"></i>code</a>{{ end }}
+{{ if .Params.data }}<a href={{.Params.data}} target="_blank" class="badge badge-small badge-blue"><i class="fa-solid fa-table"></i>&nbsp;download data</a>{{ end }}
+{{ if .Params.csv }}<a href={{.Params.csv}} download class="badge badge-small badge-blue"><i class="fa-solid fa-table"></i>&nbsp;download data</a>{{ end }}
+{{ if .Params.app }}<a href={{.Params.app}} class="badge badge-small badge-green"><i class="fa-solid fa-chart-line"></i>&nbsp;interactive app</a>{{ end }}
+{{ if .Params.software }}<a href={{.Params.software}} class="badge badge-small badge-green"><i class="fa-solid fa-box"></i>&nbsp;software</a>{{ end }}
 

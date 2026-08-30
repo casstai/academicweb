@@ -11,7 +11,10 @@
       
       </div>
       <h2>Journal articles</h2>
-      {{ range (where .Pages "Params.kind" "==" "article").GroupByDate "2006" "desc" }}
+      {{/* "accepted" = accepted but not yet in print; listed here only, with
+           an "Accepted at ..." citation. Not repeated under Under Review. */}}
+      {{ $pubs := where .Pages "Params.kind" "in" (slice "article" "accepted") }}
+      {{ range $pubs.GroupByDate "2006" "desc" }}
       <div class="row">
         <div class="column small-2 medium-2">
           <h3>{{ .Key }}</h3>
