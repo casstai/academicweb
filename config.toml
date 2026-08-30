@@ -23,7 +23,7 @@ date_format = "2 January 2006"
 
 
 # Number of publications to show on main page.
-pubs_count = 5
+pubs_count = 4
 
 # Number of posts to show on main page.
 unpublished_count = 6
@@ -57,8 +57,8 @@ site = "Twitter"
 [[params.social]]
 icon = "fa-github"
 icon_pack = "fa-brands"
-link = "https://github.com/Tyhcass"
-text = "resulumit"
+link = "https://github.com/casstai"
+text = "casstai"
 site = "GitHub"
 
 [[params.social]]
@@ -81,11 +81,21 @@ url = "/unpublished/"
 weight = 2
 
 [[menu.main]]
+name = "Data"
+url = "/data/"
+weight = 3
+
+[[menu.main]]
+name = "Software"
+url = "/software/"
+weight = 4
+
+[[menu.main]]
 name = "Teaching"
 url = "/teaching/"
-weight = 3
+weight = 5
 
 [[menu.main]]
 name = "About"
 url = "/about/"
-weight = 4
+weight = 6
