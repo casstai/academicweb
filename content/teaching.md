@@ -6,8 +6,16 @@ My teaching experience includes the following courses and workshops:
 
 ## Undergraduate courses
 
-* *C-SoDA Capstone Project: AI in Governance*
+* *C-SoDA Research Practicum: AI and Multimodal Data*
+  - Penn State University, Spring 2026
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *C-SoDA Research Practicum: AI and Governance*
   - Penn State University, Fall 2025
+
 <div style = "line-height: 50%;">
     <br>
 </div>
@@ -60,6 +68,52 @@ My teaching experience includes the following courses and workshops:
 * *Web Scraping*
   - East China Normal University, China, Dec 2020
        
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+<br>
+
+## Invited talks and guest lectures
+
+* *Hands-On with AI: Evaluating and Applying Models for Social Science Data*
+  - Social Science Research Institute Open House, Penn State University, Fall 2025
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *How to Navigate High Performance Computing*
+  - Social Science Research Institute Open House, Penn State University, Spring 2025
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *GenAI vs. Human Fact-Checkers: Accurate Ratings, Flawed Rationales*
+  - Approaches and Issues in Big Social Data (graduate), Penn State University, Spring 2025
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *LLMs in Social Science*
+  - Data Analytics and Computational Social Science (graduate), University of Massachusetts Amherst, Fall 2024
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *Latent Variable Measurements*
+  - Summer Speaker Series, Xi'an Jiaotong University, China, Summer 2023
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
+* *Measurement*
+  - Approaches and Issues in Big Social Data (graduate), Penn State University, Spring 2023
+
 <div style = "line-height: 50%;">
     <br>
 </div>
