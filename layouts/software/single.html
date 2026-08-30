@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="wrapper">
+<div class="units-row" style='margin-bottom: 0px;'>
+<div class="unit-20">&nbsp;</div>
+<div class="unit-60"><h1>{{ .Title }}</h1></div>
+</div>
+<div class="units-row">
+  <div class="unit-20 dateblock" style='text-align: right;'>
+    {{ with .Params.author }}{{ . | safeHTML }}<br>{{ end }}
+    {{ with .Params.language }}{{ . }}{{ end }}
+    {{ with .Params.version }} v{{ . }}{{ end }}
+    {{ with .Params.status }}<br>{{ . }}{{ end }}
+    <p>
+      {{ with .Params.docs }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="badge badge-small badge-blue">Documentation</a>{{ end }}
+      {{ with .Params.repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="badge badge-small badge-green">GitHub</a>{{ end }}
+    </p>
+  </div>
+  <div class="unit-60">
+    <article class="pub" itemscope itemtype="http://schema.org/SoftwareApplication">
+      <div class="pub-content">{{ .Content }}</div>
+    </article>
+    <div class='sans' style="background: #dddddd; padding: 2em;">
+      {{ if .PrevInSection }}
+      <span style="font-family: Carlito;">
+      <a href="{{.PrevInSection.RelPermalink}}"> &laquo;&nbsp;{{.PrevInSection.Title}}</a>{{ end }}{{ if .NextInSection }} | <a href="{{.NextInSection.RelPermalink}}">{{.NextInSection.Title}}&nbsp;&raquo;</a></span>
+      {{ end }}
+    </div>
+  </div>
+  </div>
+  </div>
+{{ end }}

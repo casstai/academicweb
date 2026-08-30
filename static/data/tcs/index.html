@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en" class="viz-root">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCS: Trust in Civil Servants — Yuehong Cassandra Tai</title>
+<meta name="description" content="Interactive explorer for the Trust in Civil Servants (TCS) dataset: comparable estimates of public trust in the bureaucracy across 98 countries and territories, 1986–2022.">
+<link rel="stylesheet" href="/data/explorer.css">
+</head>
+<body>
+<div class="viz-wrap">
+
+  <div class="viz-breadcrumb">
+    <a href="/">Yuehong Cassandra Tai</a> &rtrif; <a href="/data/">Data</a> &rtrif; TCS
+  </div>
+
+  <h1 class="viz-title">Trust in Civil Servants (TCS)</h1>
+  <p class="viz-sub">
+    Comparable estimates of public trust in civil servants for 98 countries and
+    territories, 1986–2022, built with a latent-variable model from 123 national
+    and cross-national surveys. Select cases to compare levels and trends; shaded
+    bands show the 80% credible interval.
+  </p>
+
+  <div class="viz-filters">
+    <div class="viz-field viz-field--grow">
+      <label class="viz-label" for="viz-search">Countries and territories (up to 5)</label>
+      <input class="viz-search" id="viz-search" type="search" placeholder="Search countries and territories…" autocomplete="off">
+      <div class="viz-results" id="viz-results"></div>
+    </div>
+
+    <div class="viz-field">
+      <span class="viz-label">Year range</span>
+      <div class="viz-years">
+        <input id="viz-year-min" type="number" aria-label="First year">
+        <span>to</span>
+        <input id="viz-year-max" type="number" aria-label="Last year">
+      </div>
+    </div>
+
+    <div class="viz-field">
+      <span class="viz-label">Display</span>
+      <div class="viz-toggles">
+        <label class="viz-toggle"><input type="checkbox" id="viz-bands" checked> 80% credible interval</label>
+        <label class="viz-toggle"><input type="checkbox" id="viz-table-toggle"> Show data table</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="viz-chips" id="viz-chips"></div>
+
+  <div class="viz-card" id="viz-card">
+    <svg class="viz-chart" id="viz-chart"></svg>
+    <div class="viz-tooltip" id="viz-tooltip"></div>
+  </div>
+
+  <div class="viz-tablewrap" id="viz-tablewrap"></div>
+
+  <div class="viz-actions">
+    <button class="viz-btn" id="viz-download-selection" type="button">Download selection (CSV)</button>
+    <a class="viz-btn" href="/data/tcs/TCS_estimates.csv" download>Download full dataset (CSV)</a>
+    <a class="viz-btn" href="https://github.com/fsolt/dcpo_trust_bureaucracy" target="_blank" rel="noopener noreferrer">Code &amp; replication</a>
+    <a class="viz-btn" href="/publications/trust-in-civil-servants/">Read the paper</a>
+  </div>
+
+  <div class="viz-notes">
+    <h2>About these estimates</h2>
+    <p>
+      TCS scores are posterior means from a latent-variable model, on a 0–1 scale
+      where higher values indicate greater public trust in civil servants. They are
+      model estimates rather than direct survey percentages, so each country-year
+      carries measurement uncertainty — the <code>sd</code>, <code>q10</code>, and
+      <code>q90</code> columns. Analyses using these scores should propagate that
+      uncertainty rather than treating the means as known quantities.
+    </p>
+    <p>
+      Coverage is uneven: cases surveyed more often have more precise estimates
+      and longer series. Wide bands mean sparse underlying survey data, not
+      volatile opinion.
+    </p>
+
+    <h2>Citation</h2>
+    <div class="viz-cite">
+      Tai, Yuehong Cassandra, and Frederick Solt. 2026. “Trust in civil servants:
+      A cross-national dataset for public policy research, 1986–2022.”
+      <em>Political Studies</em>.
+    </div>
+
+    <h2>Full posterior draws</h2>
+    <p>
+      This page ships the country-year summaries. The full posterior draws, which
+      you need to propagate measurement uncertainty properly, are in the
+      <a href="https://github.com/fsolt/dcpo_trust_bureaucracy" target="_blank" rel="noopener noreferrer">replication repository</a>.
+    </p>
+  </div>
+
+</div>
+
+<script src="/data/tcs/data.js"></script>
+<script>window.VIZ_CONFIG = { defaultCountries: ["United States", "Germany", "Poland"],
+  unit: "country or territory", units: "countries and territories" };</script>
+<script src="/data/explorer.js"></script>
+</body>
+</html>

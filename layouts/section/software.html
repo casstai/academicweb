@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="wrapper">
+  <div class="row">
+    <div style='padding: 1rem 0.9375rem 1rem;'>
+
+      <p>I develop open-source software for evaluating and documenting AI-generated data in
+      political and social science research. Package documentation is built and hosted
+      separately so that it tracks the code on every release.</p>
+
+      <div style='padding-bottom: 1.5rem;'></div>
+
+      {{ range .Pages.ByDate.Reverse }}
+      <div class="row" style="margin-bottom: 2.5rem;">
+        <div class="column small-12">
+          <h2 style="margin-bottom: 0.2rem;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+
+          <p style="font-size: 90%; color: #555; margin-bottom: 0.5rem;">
+            {{ with .Params.author }}{{ . | safeHTML }}{{ end }}
+            {{ with .Params.language }} &middot; {{ . }}{{ end }}
+            {{ with .Params.version }} &middot; v{{ . }}{{ end }}
+            {{ with .Params.status }} &middot; {{ . }}{{ end }}
+          </p>
+
+          {{ with .Params.summary }}<p style="font-size: 95%;">{{ . | markdownify }}</p>{{ end }}
+
+          <p>
+            <a href="{{ .RelPermalink }}" class="badge badge-small">Details</a>
+            {{ with .Params.docs }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="badge badge-small badge-blue">Documentation</a>{{ end }}
+            {{ with .Params.repo }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="badge badge-small badge-green">GitHub</a>{{ end }}
+          </p>
+        </div>
+      </div>
+      {{ end }}
+
+     </div>
+   </div>
+ </div>
+ {{ end }}
