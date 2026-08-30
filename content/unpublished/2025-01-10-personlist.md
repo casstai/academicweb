@@ -1,10 +1,14 @@
 ---
-author: Li, Jia, M. Rosemary Pang, and Yuehong Cassandra Tai
 comments: false
 date: '2025-01-10'
 slug: trust-personalist
-title: 'Surfing Waves or Making Waves? Declining Trust in Democracy and Election of Personalist Leaders'
+title: 'Personalist Parties and Trust in Institutions'
 kind: working paper
+_build:
+  render: never
+  list: local
+citation: (with Jia Li and M. Rosemary Pang)
+ordinal: 7
 tags:
 - trust
 - personalist leader
