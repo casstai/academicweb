@@ -1,6 +1,6 @@
 {{ $pub_kind := index .Params "kind" | default "unpublished" }}
-{{/* Works in progress and accepted-but-unpublished papers have no meaningful
-     publication year, so it is suppressed. The year normally separates the
+{{/* Anything not yet published -- works in progress, accepted, under review,
+     R&R -- has no meaningful publication year, so it is suppressed. The year normally separates the
      author list from the title; without it the two run together, so these
      entries get a closing period after the authors and a quoted title instead
      (matching the CV's own style).
@@ -8,7 +8,7 @@
      Works in progress may omit `author` entirely and name collaborators in
      `citation` as "(with ...)", the way the CV lists them -- so the separating
      period is emitted only when there is actually an author to separate. */}}
-{{ $show_year := not (in (slice "working paper" "accepted") $pub_kind) }}
+{{ $show_year := not (in (slice "working paper" "accepted" "under review" "rr") $pub_kind) }}
 {{ $has_author := or (isset .Params "author") (isset .Params "authors") }}
 <i class="fa-li fa  {{ if eq $pub_kind "unpublished" }}fa-file-o {{ else if eq $pub_kind "dormant" }}fa-file-o {{ else }}fa-file {{ end }} fa-fw" style="color:#03396c;font-size:80%;padding-top:6px;"></i>
 {{ with .Params.author }}{{ . | safeHTML }}{{ end }}{{ with .Params.authors }}{{ . | safeHTML }}{{ end }}{{ if and (not $show_year) $has_author }}.{{ end }}
