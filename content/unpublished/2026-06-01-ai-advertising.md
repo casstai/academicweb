@@ -5,7 +5,7 @@ date: '2026-06-01'
 slug: ai-advertising
 title: 'From Adoption to Accountability: Mapping Societal Impacts of AI in Advertising Research'
 kind: under review
-ordinal: 4
+ordinal: 6
 tags:
 - AI
 - accountability

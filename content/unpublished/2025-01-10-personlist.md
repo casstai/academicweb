@@ -8,7 +8,7 @@ _build:
   render: never
   list: local
 citation: (with Jia Li and M. Rosemary Pang)
-ordinal: 7
+ordinal: 5
 tags:
 - trust
 - personalist leader

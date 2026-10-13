@@ -8,7 +8,7 @@ _build:
   render: never
   list: local
 citation: (with Jia Li, M. Rosemary Pang, Erico Yu)
-ordinal: 4
+ordinal: 7
 tags:
 - AI
 - democracy

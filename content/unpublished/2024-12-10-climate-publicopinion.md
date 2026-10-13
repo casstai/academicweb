@@ -8,7 +8,7 @@ _build:
   render: never
   list: local
 citation: (with Xun Cao and Fred Solt) [Lead Author]
-ordinal: 5
+ordinal: 4
 tags:
 - climate
 - public opinion

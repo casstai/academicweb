@@ -6,6 +6,13 @@ My teaching experience includes the following courses and workshops:
 
 ## Undergraduate courses
 
+* *C-SoDA Research Practicum: AI and Local Governance*
+  - Penn State University, Fall 2026
+
+<div style = "line-height: 50%;">
+    <br>
+</div>
+
 * *C-SoDA Research Practicum: AI and Multimodal Data*
   - Penn State University, Spring 2026
 
